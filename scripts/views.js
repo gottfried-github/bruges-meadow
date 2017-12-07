@@ -23,27 +23,24 @@ $(document).ready(function() {
     })
     */
 
-    $(".grid .img_wrap").on("click touchend", function(ev) {
-      ev.preventDefault();
+    $(".grid .img_wrap").each(function() {
       var url = $(this).attr("href"); //+ "&" +routing.url_fwd_int;
       var hash_index = url.search("#")
       if (hash_index != -1) {
         var hash = url.slice(hash_index)
         url = url.slice(0, hash_index)+  "&" +routing.url_fwd_int +hash;
-        console.log(url)
+        // console.log(url)
       } else {
         url += "&" +routing.url_fwd_int
-        console.log(url)
+        // console.log(url)
       }
-
-      window.location = url;
+      $(this).attr("href", url);
     })
 
-    $("#contact").on("click touchend", function(ev) {
-      ev.preventDefault();
-      console.log($(this).attr("href")+ "?" +routing.url_fwd_ext)
-      window.location = $(this).attr("href")+ "?" +routing.url_fwd_ext
-    })
+    var contact = $("#contact");
+    var contacthref = contact.attr('href')+ "?" +routing.url_fwd_ext;
+    contact.attr('href', contacthref);
+
     console.log(routing)
   });
 
