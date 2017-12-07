@@ -1,0 +1,529 @@
+body {
+  background-color: #f2f2f2; }
+
+.text {
+  font-family: "Nunito", sans-serif;
+  color: rgba(64, 41, 53, 0.6); }
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: rgba(64, 41, 53, 0.6); }
+
+/*
+===============================     ==========================
+  grid view V
+===============================     ==========================
+*/
+/* $item-margin */
+/* $item-shadow */
+/* $item-color */
+/* $frame-width */
+/* $content-border */
+/* $content-shadow */
+/*
+@include grid(
+2px,
+2px 2px 2px 1px rgba(0, 0, 0, 0.2),
+rgb(230, 230, 230),
+5%,
+2px solid rgb(170, 0, 0),
+0px 0px 10px 1px rgba(0, 0, 0, 0.2)
+)
+*/
+/*
+potentially, you could take any custom styles for the elements
+*/
+.grid {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 900px;
+  /*
+  -o-flex-wrap: wrap;
+  */ }
+
+.grid-item_wrap {
+  margin: 0px;
+  box-sizing: border-box;
+  width: 33.33%;
+  padding: 2px;
+    /*
+
+    --------------------
+    default values:
+    --------------------
+    */ }
+
+.grid-item {
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  -o-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  background-color: #e6e6e6;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  /*
+  -o-flex-shrink: 0;
+  */ }
+
+.img_wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5%;
+    /*
+
+    --------------------
+    default values:
+    --------------------
+
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    */ }
+
+.decorated {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  border: 2px solid #aa0000;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    /*
+
+    --------------------
+    default values:
+    border: 2px solid rgb(170, 0, 0);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    --------------------
+    position: absolute;
+    */ }
+
+/*
+potentially, you could take any custom styles for the elements
+*/
+.grid {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 900px;
+  /*
+  -o-flex-wrap: wrap;
+  */ }
+
+.grid-item_wrap {
+  margin: 0px;
+  box-sizing: border-box;
+  width: 33.33%;
+  padding: 10px;
+    /*
+
+    --------------------
+    default values:
+    --------------------
+    */ }
+
+.grid-item {
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  -o-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  /*
+  -o-flex-shrink: 0;
+  */ }
+
+.img_wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px;
+    /*
+
+    --------------------
+    default values:
+    --------------------
+
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    */ }
+
+.decorated {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  border: 2px solid #ff91a7;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    /*
+
+    --------------------
+    default values:
+    border: 2px solid rgb(170, 0, 0);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    --------------------
+    position: absolute;
+    */ }
+
+/*
+===============================     ==========================
+  navigation V
+===============================     ==========================
+*/
+.header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+  /*
+  display: flex;
+  */ }
+
+.header-content {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  width: 650px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  /*
+  display: flex;
+  max-width: 650px;
+  position: relative;
+  background-color: blue;
+  position: fixed;
+  */ }
+
+.nav_link {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  text-decoration: none;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  /*
+  display: flex;
+  */ }
+
+.nav_link-text {
+  color: #333333;
+  margin: auto; }
+
+#menu-box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+  /*
+  display: flex;
+  */ }
+
+  /* possibly, the default container
+  #menu-box {
+    @include prefixedValue("display", "flex");
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+
+    // display: flex;
+  }
+  */
+.menu-path {
+  fill: none;
+  fill-rule: evenodd;
+  stroke-width: 4.05546093;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+  stroke: #f9c0d7;
+  /* #d4d4f9 */
+  /*
+  ---------------------
+  default values:
+  ---------------------
+  */ }
+
+#menu {
+  background-color: #ececec;
+  /* possibly, fill */
+  box-shadow: 2.5px 2.5px 2px 0px rgba(0, 0, 0, 0.2);
+  margin: auto; }
+
+.go-back_box {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  z-index: 2; }
+
+/* this potentially is in the arrow.scss code, as the default container */
+.go-back_btn_wrap {
+  display: block;
+  position: relative;
+  margin: 30px;
+  border-radius: 50%; }
+
+/* this may be the default container:
+  .go-back_btn_wrap {
+    display: block;
+    margin: 30px;
+    border-radius: 50%;
+  }
+*/
+
+.arrow_rotated {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.arrow_rotating_bckgrd {
+  border-radius: 50%;
+  box-shadow: 2.5px 2.5px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.arrow_rotating {
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+.arrow {
+  border-radius: 50%;
+  box-shadow: 2.5px 2.5px 2px 0px rgba(0, 0, 0, 0.2)
+  /*
+  */
+}
+
+.arrow-circle, .cta-circle {
+  opacity: 1;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: none;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+  /*
+  default values:
+  */
+  fill: #ececec;
+  /*
+  ---------------------
+  ---------------------
+  stroke:#f9c0d7;
+  stroke-width:4;
+  fill:none;
+  */ }
+
+.cta-circle {
+  fill: #3c12cd; }
+
+.arrow-path, .cta-path {
+  opacity: 1;
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+  /*
+  default values:
+  */
+  stroke: #f9c0d7;
+  /*
+  ---------------------
+  ---------------------
+  */ }
+
+.cta-path {
+  stroke: #501ef9; }
+
+#arrow-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px; }
+
+/*
+  .arrow {
+    box-shadow: 2.5px 2.5px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .arrow-circle {
+    fill:#ececec;
+  }
+
+  .arrow-path {
+    stroke:#f9c0d7;
+  }
+
+  .cta-path {
+    stroke: rgb(80, 30, 249);
+  }
+
+  .menu-path {
+    stroke:#d4d4f9;
+  }
+
+*/
+/*
+===============================     ==========================
+  contacts V
+===============================     ==========================
+*/
+.common, #form input, #form textarea, #form button {
+  background: none;
+  border: none; }
+
+#form {
+  max-width: 350px;
+  width: 100%;
+  margin: auto 25px;
+  display: flex;
+  flex-direction: column;
+  /*
+  height: 600px;
+  */ }
+
+#form input {
+  height: 35px;
+  background-color: #f2f2f2; }
+
+#form textarea {
+  resize: none;
+  height: 250px;
+  background-color: #f2f2f2; }
+
+#form button {
+  height: 35px;
+  background-color: #f2f2f2; }
+
+.contacts-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /*
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: 0px -3px 3px rgba(23, 14, 9, 0.6), 0px 5px 5px rgba(23, 14, 9, 0.75);
+  height: auto;
+  */ }
+
+/*
+.contacts-section, #form input, #form textarea, #form button {
+  background-color: rgb(242, 242, 242);
+}
+*/
+/*
+===============================     ==========================
+  footer V
+===============================     ==========================
+*/
+#footer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #e6e6e6;
+  /*
+  background-color: rgb(51, 51, 51);
+  */ }
+
+/*
+===============================     ==========================
+  operational V
+===============================     ==========================
+*/
+.solid {
+  opacity: 1; }
+
+.transparent {
+  opacity: 0; }
+
+.no-transit {
+  transition: none; }
+
+.transit {
+  transition: opacity 1s; }
+
+.noned {
+  display: none; }
+
+/*# sourceMappingURL=styleGlobals.css.map */
