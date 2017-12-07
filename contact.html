@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link href="/static/styles/flex.css" rel="stylesheet">
+  <link href="/static/styles/styleGlobal.css" rel="stylesheet">
+  <link href="/static/styles/pieces/form.css" rel="stylesheet">
+  <link href="/static/styles/contact.css" rel="stylesheet">
+  <style>
+  </style>
+</head>
+<body>
+  <!-- - var str = (routing.page === "item") ? "?route="+ routing.route : "?route="+ routing.route;-->
+  <div class="header">
+    <div class="nav" id="nav-main">
+      <a class="nav_link" href="/index">
+        <div class="nav_link-text">home</div>
+      </a>
+      <a class="nav_link" href="/catalog">
+        <div class="nav_link-text">catalog</div>
+      </a>
+      <a class="nav_link" id="contact" href="/contact">
+        <div class="nav_link-text">contacts</div>
+      </a>
+    </div>
+  </div>
+  <div class="go-back_box">
+    <a class="go-back_btn_wrap" id="btn_wrap" href="item?pages=/catalog+/&amp;pdct=58e2a5443614230c68a160f7&amp;prevhash=58e2a5443614230c68a160ec#58e2a5443614230c68a160ec?pdct=58e2a5443614230c68a160f7&amp;prevhash=58e2a5443614230c68a160ec#58e2a5443614230c68a160ec">
+      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" height="64px" width="64px">
+        <circle class="arrow-circle" cx="32" cy="32" r="34">
+        </circle>
+        <path class="arrow-path" d="m 34,38 -6.1742,-6.1742 6.1742,-6.1741">
+        </path>
+      </svg>
+    </a>
+  </div>
+  <div class="container">
+    <div class="card" id="contacts">
+      <form id="form">
+        <input type="text" placeholder="phone number">
+        <textarea placeholder="what you're interested in...">
+        </textarea>
+        <button>send it there
+        </button>
+      </form>
+    </div>
+  </div>
+  <div id="footer">
+  </div>
+  <div id="menu-box">
+    <svg id="menu" xmlns="http://www.w3.org/2000/svg" version="1.1" height="32px" width="37.3px">
+      <path class="menu-path" d="m 2,16 33.2493,0">
+      </path>
+      <path class="menu-path" d="m 2,2 33.2493,0">
+      </path>
+      <path class="menu-path" d="m 2,30 33.2493,0">
+      </path>
+    </svg>
+  </div>
+  <div class="go-back_box" id="arrow-up">
+
+    <div class="go-back_btn_wrap">
+      <svg class="svg3644 arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" height="64px" width="64px">
+        <circle class="arrow-circle" cx="32" cy="32" r="34">
+        </circle>
+        <path class="arrow-path" d="m 26,31.17 6.1742,6.1742 6.1742,-6.1741">
+        </path>
+      </svg>
+    </div>
+  </div>
+  <script src="static/scripts/libsAndPlugins/jquery-3.1.1.min.js"></script>
+  <script src="static/scripts/modernizr-custom.js"></script>
+  <script src="local_front-router/router.js"></script>
+  <script src="static/scripts/views.js"></script>
+  <script>
+  var tests = {
+  display: (Modernizr.flexbox) ? Modernizr.prefixedCSSValue("display", "flex") : false,
+  wrap: (Modernizr.flexwrap) ? Modernizr.prefixedCSS("flex-wrap") : false
+};
+
+$("#menu-box").on("click", function() {
+  console.log(this)
+  $(".header").toggleClass("solid");
+})
+
+console.log(Modernizr)
+</script><!-- script(src='scripts/libsAndPlugins/modernizr-custom.js')-->
+<script type="text/javascript">
+</script>
+</body>
+</html>
