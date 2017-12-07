@@ -150,7 +150,7 @@ function doFrontRouter(req) {
     req.routing = routing;
   } else {
     req.routing = {
-      backurl: "bruges-meadow",
+      backurl: "/bruges-meadow",
       url_fwd_ext: "pages="+ req.path
     }
 
