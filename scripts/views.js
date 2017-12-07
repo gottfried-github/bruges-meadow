@@ -28,7 +28,11 @@ $(document).ready(function() {
       var hash_index = url.search("#")
       if (hash_index != -1) {
         var hash = url.slice(hash_index)
-        url = url.slice(0, hash_index)+  "&" +routing.url_fwd_int +hash;
+        if (window.location.pathname !== "bruges-meadows") {
+          url = url.slice(0, hash_index)+  "&" +routing.url_fwd_int +hash;
+        } else {
+          url = url.slice(0, hash_index) +hash;
+        }
         // console.log(url)
       } else {
         url += "&" +routing.url_fwd_int
