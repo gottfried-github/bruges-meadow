@@ -34,7 +34,7 @@ $(document).ready(function() {
         console.log(url)
       }
 
-      window.location = url;
+      // window.location = url;
     })
 
     $("#contact").on("click touchend", function(ev) {
