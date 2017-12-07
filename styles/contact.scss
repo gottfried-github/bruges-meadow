@@ -1,0 +1,15 @@
+@import '../../node_modules/@spti/local_prefixes/prefixes.scss';
+
+#contacts {
+  z-index: auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  box-shadow: none;
+  @include prefixedValue("display", "flex");
+  @include prefixedProperty("justify-content", "center");
+  /*
+  justify-content: center;
+  display: flex;
+  height: auto;
+  */
+}

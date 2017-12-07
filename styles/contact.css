@@ -1,0 +1,22 @@
+#contacts {
+  z-index: auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  box-shadow: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /*
+  justify-content: center;
+  display: flex;
+  height: auto;
+  */ }
+
+/*# sourceMappingURL=contact.css.map */

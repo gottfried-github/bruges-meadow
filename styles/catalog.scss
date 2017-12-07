@@ -1,0 +1,67 @@
+@import '../../node_modules/@spti/local_prefixes/prefixes.scss';
+
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-vertical {
+  width: 100%;
+  padding-top: 50px;
+  @include prefixedValue("display", "flex");
+  @include prefixedProperty("flex-direction", "column");
+  @include prefixedProperty("align-items", "center");
+}
+
+.section {
+  width: 100%;
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 35px 0px 35px 0px;
+  // @include prefixedValue("display", "flex");
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 17px;
+  margin: 65px 0px 65px 0px;
+  opacity: 0.6;
+}
+
+.grid {
+  width: 100%;
+}
+
+.grid-item_wrap {
+  width: 33.33%;
+
+  /*
+  border: 2px solid rgb(51, 51, 51);
+  */
+}
+
+@media (max-width: 600px) {
+  .grid-item_wrap {
+    width: 100%;
+      padding: 10px 20px;
+
+    /*
+    border: 2px solid rgb(51, 51, 51);
+    */
+  }
+
+  .grid-item {
+    flex-shrink: 0;
+    /*
+    background-color: rgb(230, 230, 230);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+    -------------------------
+    */
+  }
+}

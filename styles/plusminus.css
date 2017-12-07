@@ -1,0 +1,44 @@
+.sign-circle {
+  opacity: 1;
+  fill: #ececec;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 1;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1; }
+
+.sign-path {
+  opacity: 1;
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: #f9c0d7;
+  stroke-width: 4.8;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1; }
+
+.sign-box {
+  width: 65px;
+  height: 65px;
+  position: relative; }
+
+.sign-path-svg, .sign-circle {
+  position: absolute;
+  top: 0px; }
+
+.sign-path_v-svg {
+  transition: transform 0.5s; }
+
+.scale {
+  transform: scale(1, 0.2); }
+
+/*# sourceMappingURL=global.css.map */
