@@ -40,7 +40,7 @@ $(document).ready(function() {
     $("#contact").on("click touchend", function(ev) {
       ev.preventDefault();
       console.log($(this).attr("href")+ "?" +routing.url_fwd_ext)
-      window.location = $(this).attr("href")+ "?" +routing.url_fwd_ext
+      // window.location = $(this).attr("href")+ "?" +routing.url_fwd_ext
     })
     console.log(routing)
   });
