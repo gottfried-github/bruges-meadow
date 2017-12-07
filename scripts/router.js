@@ -106,7 +106,7 @@ function doFrontRouter(req) {
 
         // on /item page, on urls of items we don't need the pdct property,
         // since items have each it's own pdct property
-        if (req.path === "/item") {
+        if (req.path === "bruges-meadow/item") {
           itemsfwdparams += params_fwd;
         }
 
