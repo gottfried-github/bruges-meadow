@@ -21,7 +21,7 @@ $(document).ready(function() {
     })
     */
 
-    $(".grid .img_wrap").on("click tounchend", function(ev) {
+    $(".grid .img_wrap").on("click touchend", function(ev) {
       ev.preventDefault();
       var url = $(this).attr("href"); //+ "&" +routing.url_fwd_int;
       var hash_index = url.search("#")
@@ -34,7 +34,7 @@ $(document).ready(function() {
         console.log(url)
       }
 
-      // window.location = url;
+      window.location = url;
     })
 
     $("#contact").on("click touchend", function(ev) {
