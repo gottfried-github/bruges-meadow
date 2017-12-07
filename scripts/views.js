@@ -9,7 +9,9 @@ $(document).ready(function() {
     scrollElements.push($(".contacts-section"));
   }
 
-  ScrollForestScroll.scrollForest(scrollElements, document.getElementById("arrow-up"));
+  if (window.location.pathname !== '/bruges-meadow/contact') {
+    ScrollForestScroll.scrollForest(scrollElements, document.getElementById("arrow-up"));
+  }
 
   frontRouter(function(routing) {
     $(".go-back_box.arrow-back .go-back_btn_wrap").attr("href", routing.backurl)
