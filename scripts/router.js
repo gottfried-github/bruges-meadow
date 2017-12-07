@@ -127,7 +127,7 @@ function doFrontRouter(req) {
 
       var params = "";
 
-      if (prevpage === "/item" && req.query.pdct) {
+      if (prevpage === "bruges-meadow/item" && req.query.pdct) {
         params += "pdct=" + req.query.pdct;
       }
 
