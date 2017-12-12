@@ -416,12 +416,15 @@ width: 25%;
     */ }
 
   .grid {
-    width: 1200px;
     /*
+    width: 1200px;
     */ }
 
   .section {
-    width: 1200px; }
+    /*
+    width: 1200px; 
+    */
+  }
 
   .grid-item_wrap {
     /*

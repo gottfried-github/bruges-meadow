@@ -14,7 +14,7 @@
 </head>
 <body>
   <!-- - var str = (routing.page === "item") ? "?route="+ routing.route : "?route="+ routing.route;-->
-  <div class="header">
+  <div class="header noned">
     <div class="nav" id="nav-main">
       <a class="nav_link" href="index">
         <div class="nav_link-text">home</div>
@@ -81,9 +81,26 @@
 //   wrap: (Modernizr.flexwrap) ? Modernizr.prefixedCSS("flex-wrap") : false
 // };
 
+var toggle = false;
+var timeoutId;
+var inProcess = false;
+
 $("#menu-box").on("click", function() {
-  console.log(this)
-  $(".header").toggleClass("solid");
+  // console.log(this)
+  if (!inProcess) {
+    if (toggle) {
+      $(".header").removeClass("solid");
+      timeoutId = window.setTimeout(function() {
+        $(".header").addClass('noned');
+        inProcess = false;
+      }, 1050);
+      inProcess = true;
+    } else {
+      $(".header").removeClass("noned");
+      $(".header").addClass("solid");
+      inProcess = true;
+    }
+  }
 })
 
 console.log(Modernizr)

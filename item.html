@@ -26,7 +26,7 @@
 </head>
 <body>
   <!-- - var str = (routing.page === "item") ? "?route="+ routing.route : "?route="+ routing.route;-->
-  <div class="header">
+  <div class="header noned">
     <div class="nav" id="nav-main">
       <a class="nav_link" href="index">
         <div class="nav_link-text">home</div>
@@ -185,6 +185,9 @@
           $(".header").removeClass("noned");
           $(".header").addClass("solid");
           inProcess = true;
+          timeoutId = window.setTimeout(function() {
+            inProcess = false;
+          }, 1050);
         }
       }
     })

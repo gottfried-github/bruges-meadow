@@ -258,6 +258,32 @@ potentially, you could take any custom styles for the elements
   color: #333333;
   margin: auto; }
 
+@media (max-width: 650px) {
+  .header {
+    height: 100%;
+  }
+
+  .nav {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+  }
+
+  .nav_link {
+
+    -webkit-flex-grow: 0;
+    -moz-flex-grow: 0;
+    -ms-flex-grow: 0;
+    flex-grow: 0;
+  }
+}
+
 #menu-box {
   display: -webkit-flex;
   display: -moz-flex;
