@@ -233,10 +233,26 @@
     //   display: (Modernizr.flexbox) ? Modernizr.prefixedCSSValue("display", "flex") : false,
     //   wrap: (Modernizr.flexwrap) ? Modernizr.prefixedCSS("flex-wrap") : false
     // };
+    var toggle = false;
+    var timeoutId;
+    var inProcess = false;
 
     $("#menu-box").on("click", function() {
       // console.log(this)
-      $(".header").toggleClass("solid");
+      if (!inProcess) {
+        if (toggle) {
+          $(".header").removeClass("solid");
+          timeoutId = window.setTimeout(function() {
+            $(".header").addClass('noned');
+            inProcess = false;
+          }, 1050);
+          inProcess = true;
+        } else {
+          $(".header").removeClass("noned");
+          $(".header").addClass("solid");
+          inProcess = true;
+        }
+      }
     })
 
     // console.log(Modernizr)
