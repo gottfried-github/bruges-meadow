@@ -267,7 +267,7 @@ potentially, you could take any custom styles for the elements
   position: fixed;
   width: 120px;
   height: 120px;
-  right: 0px;
+  right: 30px;
   top: 0px;
   z-index: 2;
 
@@ -321,10 +321,13 @@ user-select: none;
   -ms-user-select: none;
   user-select: none;
 
-  background-color: #ececec;
-  /* possibly, fill */
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto;
+  /*
+  #ececec
   box-shadow: 2.5px 2.5px 2px 0px rgba(0, 0, 0, 0.2);
-  margin: auto; }
+  */
+}
 
 .go-back_box {
   position: fixed;
