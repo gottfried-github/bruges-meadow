@@ -183,11 +183,14 @@
           inProcess = true;
         } else {
           $(".header").removeClass("noned");
-          $(".header").addClass("solid");
-          inProcess = true;
           timeoutId = window.setTimeout(function() {
-            inProcess = false;
-          }, 1050);
+            $(".header").addClass("solid");
+            inProcess = true;
+            timeoutId = window.setTimeout(function() {
+              inProcess = false;
+              console.log('wasnt toggle, inProcess:', inProcess)
+            }, 1050);
+          }, 100)
         }
       }
     })

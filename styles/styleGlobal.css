@@ -261,6 +261,7 @@ potentially, you could take any custom styles for the elements
 @media (max-width: 650px) {
   .header {
     height: 100%;
+    background-color: rgba(242, 242, 242, 0.4);
   }
 
   .nav {
