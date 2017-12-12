@@ -270,6 +270,7 @@ potentially, you could take any custom styles for the elements
   right: 0px;
   top: 0px;
   z-index: 2;
+
   /*
   display: flex;
   */ }
@@ -297,6 +298,13 @@ potentially, you could take any custom styles for the elements
   stroke-dasharray: none;
   stroke-opacity: 1;
   stroke: #f9c0d7;
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
   /* #d4d4f9 */
   /*
   ---------------------
@@ -305,6 +313,14 @@ potentially, you could take any custom styles for the elements
   */ }
 
 #menu {
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   background-color: #ececec;
   /* possibly, fill */
   box-shadow: 2.5px 2.5px 2px 0px rgba(0, 0, 0, 0.2);
@@ -368,6 +384,13 @@ potentially, you could take any custom styles for the elements
   stroke-dasharray: none;
   stroke-dashoffset: 0;
   stroke-opacity: 1;
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
   /*
   default values:
   */
@@ -384,6 +407,14 @@ potentially, you could take any custom styles for the elements
   fill: #3c12cd; }
 
 .arrow-path, .cta-path {
+
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
   opacity: 1;
   fill: none;
   fill-opacity: 1;
