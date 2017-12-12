@@ -10,7 +10,7 @@ $(document).ready(function() {
   $(".content-text_wrap").children("h3").text(product.name)
   $(".content-text").text(product.description)
 
-  initMoves(urls);
+  // initMoves(urls);
 })
 
 function querry() {
@@ -30,18 +30,21 @@ function querry() {
 }
 
 function setMedia(urls) {
-  var boards = [$("#top"), $("#middle") /*, $("#bottom")*/];
+  // var boards = [$("#top"), $("#middle") /*, $("#bottom")*/];
+  $("#top").children(".decorated").attr("src", urls[0]);
 
+  /*
   if (urls.length == 1) {
-    $("#top").children(".decorated").attr("src", urls[0]);
+  $("#top").children(".decorated").attr("src", urls[0]);
   } else if (urls.length == 2) {
-    $("#top").children(".decorated").attr("src", urls[0]);
-    $("#bottom").children(".decorated").attr("src", urls[1]);
+   $("#top").children(".decorated").attr("src", urls[0]);
+   $("#bottom").children(".decorated").attr("src", urls[1]);
   } else if (urls.length > 2) {
-    for (var i = 0; i < 2; i++) {
-      boards[i].children(".decorated").attr("src", urls[i]);
-    }
+   for (var i = 0; i < 2; i++) {
+     boards[i].children(".decorated").attr("src", urls[i]);
+   }
   }
+  */
 }
 
 function manageHeight() {
