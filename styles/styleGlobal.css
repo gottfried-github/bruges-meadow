@@ -283,6 +283,10 @@ potentially, you could take any custom styles for the elements
     -ms-flex-grow: 0;
     flex-grow: 0;
   }
+
+  .go-back_box {
+    display: none;
+  }
 }
 
 #menu-box {
