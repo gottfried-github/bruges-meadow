@@ -233,28 +233,37 @@
     //   display: (Modernizr.flexbox) ? Modernizr.prefixedCSSValue("display", "flex") : false,
     //   wrap: (Modernizr.flexwrap) ? Modernizr.prefixedCSS("flex-wrap") : false
     // };
-    var toggle = false;
-    var timeoutId;
-    var inProcess = false;
 
-    $("#menu-box").on("click", function() {
-      // console.log(this)
-      if (!inProcess) {
-        if (toggle) {
-          $(".header").removeClass("solid");
-          timeoutId = window.setTimeout(function() {
-            $(".header").addClass('noned');
-            inProcess = false;
-          }, 1050);
-          inProcess = true;
-        } else {
-          $(".header").removeClass("noned");
-          $(".header").addClass("solid");
-          inProcess = true;
-        }
-      }
-    })
 
+        var toggle = false;
+        var timeoutId;
+        var inProcess = false;
+
+        $("#menu-box").on("click", function() {
+          // console.log(this)
+          if (!inProcess) {
+            if (toggle) {
+              $(".header").removeClass("solid");
+              timeoutId = window.setTimeout(function() {
+                $(".header").addClass('noned');
+                inProcess = false;
+                toggle = false;
+              }, 1050);
+              inProcess = true;
+            } else if (!toggle) {
+              $(".header").removeClass("noned");
+              timeoutId = window.setTimeout(function() {
+                $(".header").addClass("solid");
+                inProcess = true;
+                timeoutId = window.setTimeout(function() {
+                  inProcess = false;
+                  toggle = true;
+                  console.log('wasnt toggle, inProcess:', inProcess)
+                }, 1050);
+              }, 100)
+            }
+          }
+        })
     // console.log(Modernizr)
 </script>
 <script>

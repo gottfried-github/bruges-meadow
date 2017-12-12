@@ -179,15 +179,17 @@
           timeoutId = window.setTimeout(function() {
             $(".header").addClass('noned');
             inProcess = false;
+            toggle = false;
           }, 1050);
           inProcess = true;
-        } else {
+        } else if (!toggle) {
           $(".header").removeClass("noned");
           timeoutId = window.setTimeout(function() {
             $(".header").addClass("solid");
             inProcess = true;
             timeoutId = window.setTimeout(function() {
               inProcess = false;
+              toggle = true;
               console.log('wasnt toggle, inProcess:', inProcess)
             }, 1050);
           }, 100)
