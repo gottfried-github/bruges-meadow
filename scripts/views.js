@@ -32,8 +32,11 @@ $(document).ready(function() {
             // if (window.location.pathname !== "bruges-meadows") {
             url = url.slice(0, hash_index)+  "&" +routing.url_fwd_int +hash;
             // }
+          } else if (window.location.pathname === "/bruges-meadow/catalog" && typeof(routing.url_fwd_ext) !== 'undefined') {
+            url = url.slice(0, hash_index)+  "&" +routing.url_fwd_ext +hash;
           } else {
-          url = url.slice(0, hash_index) +hash;
+            url = url.slice(0, hash_index) +hash;
+          }
         }
         // console.log(url)
       } else {
